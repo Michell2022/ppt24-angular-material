@@ -1,0 +1,18 @@
+<div class="flex justify-center text-center">
+
+    <ol>
+        <img src="https://img.informer.com/icons_mac/png/128/520/520345.png" alt="imagen_logo">
+        <li>
+            <mat-form-field appearance="fill">
+                <mat-label>¿Dime cual es tu nombre?</mat-label>
+                <input matInput [(ngModel)]="nombre">
+            </mat-form-field>
+        </li>
+        <li>
+            <button mat-raised-button (click)="openDialog()">Pick one</button>
+        </li>
+        <li  class="py-4 text-2xl" *ngIf="animal">
+            <span class="text-blue-500">{{nombre}}</span> tu eligiste: <span>{{animal | uppercase}}</span>
+        </li>
+    </ol>
+</div>
